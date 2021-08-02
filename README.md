@@ -1,2 +1,2 @@
 # Group2Project1
-BTC/Equity Correlation
+Covid to Financial Data Correlation
