@@ -7,3 +7,69 @@ Since the appearance of Bitcoin, I have always wondered what is the role of Bitc
 In order to get data to carry out our analysis, We used API to retrieve Bitcoin prices. They also have free stock data available but in order to show you two different possibilities to get data.
 
 As a proxy for our market data, we are going to use QQQ, GLD, SPY, VIX, & TNX, these indexes measure the stock performance of large companies listed in the United States, gold, 10 Treasury Note Yield Index and the market volatility.  We will use Pandas DataReader to download SP500 prices and Federal Reserve Economic Data (FRED) as the source.
+
+Second Side:
+
+
+Since the emergence of COVID-19, global financial markets have experienced turbulent times. After the markets initially experienced a sharp slump at the beginning of 2020 a rapid (V-shaped) recovery led to new record highs at the end of the year. However, there were also sectors and asset classes whose performance was precisely the opposite. We created a correlation matrix that shows how the prices of various asset classes were affected by COVID-19. We included asset classes such as stocks, resources, futures, and cryptocurrencies. We will use the Pearson Correlation Coefficient. The matrix will measure the correlation between COVID-19 cases and several financial assets such as gold, Bitcoin, and different stocks.
+
+The Pearson correlation coefficient r is a standard measure for quantifying a linear relationship between two variables. In other words, r is a measure of how strongly two continuous variables (for example, price or volume) tend to make similar changes. For the Pearson correlation coefficient to return a meaningful value, the following conditions must be met:
+
+    Both variables x and y are metrically scaled and continuous.
+    The relationship between the two variables is approximately linear.
+    The two samples of the variables x and y are independent of each other.
+
+1.1 Load Historic COVID-19 Data
+
+We begin by downloading the COVID-19 data. For this purpose, we will use the Statworx API. It provides historical time series data on the number of COVID-19 cases in different countries. In addition, the data contains the number of casualties.
+
+1.2 Loading Data on Selected Financial Assets
+
+We continue by downloading historical price data on different financial assets. For this purpose, we use the Yahoo Finance API. We limit the period to the time after the first documented COVID-19 cases. When you execute the code of this tutorial as it is, you will receive price information for the following financial assets:
+
+Stock Market Indexes
+
+S&P500
+DAX
+Niki
+N225
+S&P500 Futures
+Stocks: Online Services
+
+Amazon
+Netflix
+Apple
+Google
+Microsoft
+Stocks: Airlines
+
+Lufthansa Stock
+American Airlines
+Resource Futures
+
+Crude Oil Price
+Gold
+Soybean Price
+Treasury Bonds Futures
+
+US Treasury Bonds
+Exchange Rates
+
+EUR-USD
+CHF-EUR
+GBP-USD
+GBP-EUR
+
+Crypto Currencies
+
+BTC-USD
+ETH-USD
+
+Next, we will visualize the historical data using line charts.
+
+Next, we will calculate the correlation matrix. Various Python libraries make this an easy task that only requires a few lines of code. We will use the standard math package for this purpose.The matrix shows the Pearson correlation coefficients of all the pairs (X, Y) in our dataset.
+
+# Visualizing the Correlation Matrix in a Heatmap
+
+Heatmaps are an excellent choice for visualizing a correlation matrix. The heatmap applies a color palette to represent numeric values on a scale in different colors. This makes it easier to capture differences and similarities among the correlation coefficients. In Python, we can create heatmaps using the Seaborn package.
+

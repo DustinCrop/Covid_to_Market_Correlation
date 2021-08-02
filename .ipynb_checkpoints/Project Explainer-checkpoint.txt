@@ -1,0 +1,9 @@
+First we will retrieve, using a free API, Bitcoin and QQQ, GLD, SPY, VIX, & TNX prices for the last years. Then, we will calculate the correlation between the stocks  and BTC. Finally, we will conclude the analysis plotting the correlation through a correlation matrix graph.
+Since the appearance of Bitcoin, I have always wondered what is the role of Bitcoin in our economy. There are three potential scenarios:
+# Does Bitcoin have a similar role than for example Gold? Gold is considered a safe-heaven investment. That is, when the economy is heading into a recession, Gold price tends to move upwards due to investors moving from stocks to Gold. This helps investors to reduce potential losses that a crash in the stock market will bring to their portfolios. If Bitcoin has been playing a safe-heaven role in the investment world, we should expect to get a negative relationship between stock and Bitcoin prices. 
+# Another possibility is for Bitcoin to follow the same trend than the markets. That is, if stock prices are rallying, is this positivism contagious, and therefore, also visible in Bitcoin prices?
+# A third potential outcome from our analysis may be that Bitcoin prices do not show a relationship with the stock market at all.
+
+In order to get data to carry out our analysis, We used API to retrieve Bitcoin prices. They also have free stock data available but in order to show you two different possibilities to get data.
+
+As a proxy for our market data, we are going to use QQQ, GLD, SPY, VIX, & TNX, these indexes measure the stock performance of large companies listed in the United States, gold, 10 Treasury Note Yield Index and the market volatility.  We will use Pandas DataReader to download SP500 prices and Federal Reserve Economic Data (FRED) as the source.
